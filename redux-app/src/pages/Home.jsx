@@ -25,20 +25,15 @@ function deletePlayer(id){
       'Content-Type': 'application/json'
     },  //if you do not want to send any addional data,  replace the complete JSON.stringify(YOUR_ADDITIONAL_DATA) with null
   })
-
- 
 }
-
 
 useEffect(() => {
   
 
   async function getPlayers(){
     try {
-      console.log('I have been called');
       const response = await fetch(`https://fsa-puppy-bowl.herokuapp.com/api/2405-UNF-HY-WEB-PT/players`);
       const { data } = await response.json();
-      console.log(data)
       setPlayers(data.players);
     } catch(e){
       setError(e);
@@ -47,7 +42,7 @@ useEffect(() => {
   }
 
   getPlayers();
-}, []);
+}, [players]);
 
 // Show a loading message while data is being fetched
 if (players.length == 0) {
@@ -85,6 +80,7 @@ return (
           </div>
         </div>
       ))}
+
     </div>
 );
 };
