@@ -6,6 +6,8 @@ import Players from "./features/players/Players"
 import PlayerDetail from "./pages/PlayerDetail";
 import { Routes, Route, Link, useParams } from "react-router-dom";
 import Home from "./pages/Home";
+import Form from "./pages/Form";
+import Searchbar from "./pages/Searchbar";
 
 // Define the App component
 function App() {
@@ -17,7 +19,7 @@ return (
 <div id="container">
 <div id="navbar">
     <Link to="/">Home Page</Link>
-    <Link to="/add">Add Player</Link>
+    <Link to="/searchbar"> Search Bar </Link>
   </div>
 <div>
 </div>
@@ -26,9 +28,10 @@ return (
         <Route path="/" element={<Home />} />
         <Route path="/players" element={<Players />} />
         <Route path="/player/:id" element={<PlayerDetail />} />
-        <Route path="/add" element={<Home />} />
+        <Route path="/searchbar" element={<Searchbar />} />
       </Routes>
 </div>
+<Form/>
 </>
 );
 }

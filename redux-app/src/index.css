@@ -83,7 +83,7 @@ body {
   text-align: center; /* The details text is centered. */
   }
   
-  h1{
+  h1, h2{
     text-align: center;
   }
   
@@ -94,3 +94,23 @@ body {
     padding: 2em;
     justify-content: space-evenly;
   }
+  .formLayout{
+    display: block;
+    text-align: center;
+  }
+
+  form{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    height: 50%;
+    width: 50%;
+    border-style: solid;
+}
+
+.blockItUp{
+  display: block;
+  clear:both;
+
+}
